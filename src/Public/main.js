@@ -18,8 +18,10 @@ async function uploadFile(fileform) {
         //.then(data => console.log(data))
         .catch(err => alert("there is " + err));
 
-        console.log(value);
         
+    try{
+        console.log(value);
+    
     if (value['sucess'] === "truee") {
 
         alert("sucessfully uploaded");
@@ -28,5 +30,10 @@ async function uploadFile(fileform) {
     else {
         alert("failed to upload");
     }
+}
+catch(err)
+{
+    alert("failed to upload"+err);
+}
 
 }
